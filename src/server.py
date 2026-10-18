@@ -1,13 +1,15 @@
 """COMSOL MCP Server - Main entry point."""
 
 import logging
+import os
 from mcp.server.fastmcp import FastMCP
 
-from .tools.session import register_session_tools
+from .tools.session import register_session_tools, session_manager
 from .tools.model import register_model_tools
 from .tools.parameters import register_parameter_tools
 from .tools.geometry import register_geometry_tools
 from .tools.physics import register_physics_tools
+from .tools.electrochemistry import register_electrochemistry_tools
 from .tools.mesh import register_mesh_tools
 from .tools.study import register_study_tools
 from .tools.results import register_results_tools
@@ -17,6 +19,8 @@ from .resources.model_resources import register_model_resources
 from .knowledge.embedded import register_knowledge_tools
 
 logging.basicConfig(level=logging.INFO)
+# MPh logs at INFO level while the JVM starts, which deadlocks with JPype (reproduced on Windows + COMSOL 6.3)
+logging.getLogger('mph').setLevel(logging.WARNING)
 logger = logging.getLogger(__name__)
 
 mcp = FastMCP("COMSOL MCP")
@@ -29,6 +33,7 @@ def register_all_tools() -> None:
     register_parameter_tools(mcp)
     register_geometry_tools(mcp)
     register_physics_tools(mcp)
+    register_electrochemistry_tools(mcp)
     register_mesh_tools(mcp)
     register_study_tools(mcp)
     register_results_tools(mcp)
@@ -54,20 +59,22 @@ def main() -> None:
     register_all_tools()
     register_all_resources()
     
-    # Pre-start COMSOL session on the main thread to avoid JVM hang in AnyIO worker threads
-    logger.info("Pre-starting COMSOL session on main thread...")
-    try:
-        from .tools.session import session_manager
-        # Use default cores and version
-        res = session_manager.start()
-        if res.get("success"):
-            logger.info(f"COMSOL session pre-started successfully: {res}")
-        else:
-            logger.error(f"Failed to pre-start COMSOL session: {res.get('error')}")
-    except Exception as e:
-        logger.error(f"Failed to pre-start COMSOL session: {e}")
-        
-    mcp.run()
+    transport = os.environ.get("COMSOL_MCP_TRANSPORT", "stdio").strip().lower()
+
+    if transport == "stdio":
+        # The stdio transport immediately spawns a thread blocked on stdin (fd 0), and
+        # JPype's startJVM deadlocks forever while fd 0 is read by another thread, so the
+        # JVM must be started before mcp.run() (reproduced on Windows + COMSOL 6.3).
+        logger.info(f"COMSOL pre-start: {session_manager.start()}")
+    else:
+        mcp.settings.host = os.environ.get("COMSOL_MCP_HOST", "127.0.0.1")
+        mcp.settings.port = int(os.environ.get("COMSOL_MCP_PORT", "8765"))
+        logger.info(
+            f"HTTP transport '{transport}' on {mcp.settings.host}:{mcp.settings.port}"
+            " (COMSOL starts lazily on first tool call)"
+        )
+
+    mcp.run(transport=transport)
 
 
 if __name__ == "__main__":

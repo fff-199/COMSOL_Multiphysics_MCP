@@ -4,6 +4,41 @@ MCP Server for COMSOL Multiphysics simulation automation via AI agents.
 
 English | [中文](README_CN.md)
 
+## Star History
+
+[![GitHub stars](https://img.shields.io/github/stars/wjc9011/COMSOL_Multiphysics_MCP?style=social)](https://github.com/wjc9011/COMSOL_Multiphysics_MCP/stargazers)
+
+[![Star History Chart](https://starchart.cc/wjc9011/COMSOL_Multiphysics_MCP.svg)](https://starchart.cc/wjc9011/COMSOL_Multiphysics_MCP)
+
+## Publication and Citation
+
+The research paper describing COMSOL-MCP is available in *Neurocomputing*:
+
+> Naiyin Zhang and Junchao Wang, “[COMSOL-MCP: An open-source model context protocol interface for AI-assisted multiphysics simulation](https://doi.org/10.1016/j.neucom.2026.134481),” *Neurocomputing*, vol. 703, article 134481, 2026.
+
+Publisher page: [ScienceDirect](https://linkinghub.elsevier.com/retrieve/pii/S0925231226018795)
+
+If COMSOL-MCP contributes to your research, please cite the paper:
+
+```bibtex
+@article{Zhang2026COMSOLMCP,
+  title   = {COMSOL-MCP: An Open-Source Model Context Protocol Interface for AI-Assisted Multiphysics Simulation},
+  author  = {Zhang, Naiyin and Wang, Junchao},
+  journal = {Neurocomputing},
+  volume  = {703},
+  pages   = {134481},
+  year    = {2026},
+  doi     = {10.1016/j.neucom.2026.134481},
+  url     = {https://doi.org/10.1016/j.neucom.2026.134481}
+}
+```
+
+### Citation guidance
+
+- Cite the paper when referring to the COMSOL-MCP method, architecture, capabilities, or evaluation.
+- If you use or modify the software, cite both the paper and the repository. Use GitHub’s **Cite this repository** menu, which is backed by [`CITATION.cff`](CITATION.cff).
+- For reproducibility, identify the exact release tag or commit used and include the repository URL and access date in your data/code availability statement.
+
 ## Project Goal
 
 Build a complete COMSOL MCP Server enabling AI agents (like Claude, opencode) to perform multiphysics simulations through the MCP protocol:
@@ -25,8 +60,8 @@ Build a complete COMSOL MCP Server enabling AI agents (like Claude, opencode) to
 
 ```bash
 # Clone repository
-git clone https://github.com/wjc9011/comsol-mcp.git
-cd comsol-mcp
+git clone https://github.com/wjc9011/COMSOL_Multiphysics_MCP.git
+cd COMSOL_Multiphysics_MCP
 
 # Install dependencies
 python -m pip install -e .
@@ -80,7 +115,7 @@ Create `opencode.json` in project root:
     "comsol": {
       "command": "python",
       "args": ["-m", "src.server"],
-      "cwd": "/path/to/comsol-mcp"
+      "cwd": "/path/to/COMSOL_Multiphysics_MCP"
     }
   }
 }
@@ -139,7 +174,7 @@ comsol_mcp/
     └── test_basic.py                # Unit tests
 ```
 
-## Available Tools (80+ total)
+## Available Tools (100+ total)
 
 ### Session (4)
 
@@ -174,7 +209,7 @@ comsol_mcp/
 | `param_sweep_setup` | Setup parametric sweep |
 | `param_description` | Get/set description |
 
-### Geometry (14)
+### Geometry (16)
 
 | Tool | Description |
 |------|-------------|
@@ -192,8 +227,10 @@ comsol_mcp/
 | `geometry_build` | Build geometry |
 | `geometry_list_features` | List features |
 | `geometry_get_boundaries` | Get boundary numbers |
+| `geometry_create_box_selection` | Create a named selection by position |
+| `geometry_create_side_selections` | Create left/right/top/bottom selections |
 
-### Physics (16)
+### Physics (28)
 
 | Tool | Description |
 |------|-------------|
@@ -204,7 +241,18 @@ comsol_mcp/
 | `physics_add_solid_mechanics` | Add Solid Mechanics |
 | `physics_add_heat_transfer` | Add Heat Transfer |
 | `physics_add_laminar_flow` | Add Laminar Flow |
+| `physics_add_acoustics` | Add a geometry-based acoustic interface by COMSOL type |
+| `physics_add_pressure_acoustics` | Add Pressure Acoustics |
+| `physics_add_coefficient_form_pde` | Add Coefficient Form PDE |
+| `physics_add_general_form_pde` | Add General Form PDE |
+| `physics_add_weak_form_pde` | Add Weak Form PDE |
 | `physics_configure_boundary` | Configure boundary condition |
+| `physics_configure_acoustic_boundary` | Configure one acoustic boundary condition |
+| `physics_setup_acoustic_boundaries` | Configure multiple acoustic boundary conditions |
+| `physics_configure_pde_boundary` | Configure one PDE boundary condition |
+| `physics_setup_pde_boundaries` | Configure multiple PDE boundary conditions |
+| `physics_get_acoustic_boundary_conditions` | List common acoustic boundary feature types |
+| `physics_get_pde_boundary_conditions` | List common PDE boundary feature types |
 | `physics_set_material` | Assign material |
 | `physics_list_features` | List physics features |
 | `physics_remove` | Remove physics |
@@ -214,11 +262,34 @@ comsol_mcp/
 | `physics_interactive_setup_flow` | Interactive flow BC setup |
 | `physics_boundary_selection` | Generic boundary setup |
 
-### Mesh (3)
+### Electrochemistry (10)
+
+Battery, fuel cell, electrodeposition, and corrosion support backed by a type
+registry **verified against a live COMSOL 6.3 session** (26 interfaces, 600+
+feature/subfeature types). A complete worked example — an 18650 cell 1C
+constant-current discharge — is included in
+`src/knowledge/prompts/electrochemistry.md`; call `docs_get("electrochemistry")`
+to retrieve it at runtime.
+
+| Tool | Description |
+|------|-------------|
+| `electrochemistry_get_interfaces` | List verified interface types (battery, current distribution, corrosion, ...) |
+| `electrochemistry_get_feature_types` | List verified feature types of an interface with dimensions |
+| `electrochemistry_add_interface` | Add a verified interface (e.g. `LithiumIonBatteryMPH`, `LumpedBattery`) |
+| `electrochemistry_list_features` | Inspect features with actual COMSOL types (`getType()`) |
+| `electrochemistry_add_feature` | Create a feature, incl. subfeatures via `parent_feature` |
+| `electrochemistry_set_feature_selection` | Assign domains/boundaries to an existing feature |
+| `electrochemistry_set_feature_properties` | Set feature properties (rejected names reported) |
+| `electrochemistry_list_feature_properties` | Ask COMSOL for a feature's valid property names |
+| `electrochemistry_list_interface_properties` | Read interface-level property groups (e.g. `BatterySettings`) |
+| `electrochemistry_set_interface_properties` | Configure interface-level settings (capacity, SOC, current, ...) |
+
+### Mesh (4)
 
 | Tool | Description |
 |------|-------------|
 | `mesh_list` | List mesh sequences |
+| `mesh_create_sequence` | Create a mesh sequence |
 | `mesh_create` | Generate mesh |
 | `mesh_info` | Get mesh statistics |
 
@@ -283,7 +354,7 @@ comsol_mcp/
 
 **Run**:
 ```bash
-cd /path/to/comsol-mcp
+cd /path/to/COMSOL_Multiphysics_MCP
 python client_script/create_chip_tsv_final.py
 ```
 
@@ -309,7 +380,7 @@ python client_script/create_chip_tsv_final.py
 
 **Run**:
 ```bash
-cd /path/to/comsol-mcp
+cd /path/to/COMSOL_Multiphysics_MCP
 python client_script/create_micromixer_auto.py
 ```
 
@@ -362,6 +433,20 @@ bc.set('U0', '1[mm/s]')
 | Heat Transfer | ConvectiveHeatFlux | `h`, `Text` |
 | Laminar Flow | InletBoundary | `U0`, `NormalInflowVelocity` |
 | Laminar Flow | OutletBoundary | `p0` |
+| Pressure Acoustics | SoundHard | No additional property |
+| Pressure Acoustics | SoundSoft | No additional property |
+| Pressure Acoustics | Pressure | `p0` |
+| Pressure Acoustics | Impedance | `Zn` |
+| Pressure Acoustics | NormalAcceleration | `nacc` |
+| Pressure Acoustics | NormalVelocity | `nvel` |
+| Pressure Acoustics | PlaneWaveRadiation | No additional property |
+| Pressure Acoustics | SphericalWaveRadiation | No additional property |
+| PDE | DirichletBoundary | `r` |
+| PDE | FluxBoundary | `g`, `q` |
+| PDE | ZeroFluxBoundary | No additional property |
+| PDE | WeakContribution | `weak` |
+| PDE | PeriodicCondition | No additional property |
+
 
 ### 3. Client Session Limitation
 
