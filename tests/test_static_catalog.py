@@ -7,12 +7,14 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.tools.static_catalog import (
     _catalog_info,
+    _discretization,
     _layer_schema,
     _layer_types,
     _merged_interface,
     _physics_schema,
     _search_couplings,
     _search_interfaces,
+    _variables_search,
 )
 
 
@@ -86,6 +88,24 @@ def test_physics_schema_resolved_props():
     es = next(f for f in iface["features"] if f["id"] == "ElectrodeSurface")
     assert es.get("props"), "ElectrodeSurface missing resolved props"
 
+
+
+
+def test_variables_dictionary():
+    hits = _variables_search("eta", module="bfc", name_only=True)
+    names = [h["name"] for h in hits]
+    assert any("eta" in n for n in names)
+    hits2 = _variables_search("itotavg", name_only=True)
+    assert hits2 and hits2[0]["name"].endswith("itotavg")
+    assert "item.int(" in hits2[0]["expression"]
+
+
+def test_discretization_index():
+    d = _discretization("LithiumIonBatteryMPH")
+    assert d["element_orders"]["order_concentration"] == "2"
+    assert d["element_orders"]["order_electricpotential"] == "2"
+    lf = _discretization("LaminarFlow")
+    assert lf["element_orders"]["order_fluid"] == "1"
 
 if __name__ == "__main__":
     for name, fn in sorted({k: v for k, v in globals().items()

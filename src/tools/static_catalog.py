@@ -115,6 +115,44 @@ def _layer_schema(layer: str, type_name: str) -> Optional[list]:
     return None
 
 
+def _variables_search(query: str, module: Optional[str] = None,
+                      name_only: bool = False, limit: int = 50) -> list:
+    """Search the extracted physics variable dictionary (19k variables with
+    defining expressions, extracted offline from the decompiled mphphb
+    builder classes). Query matches variable name (and expression unless
+    name_only); module filters by com.comsol module (bfc, cfd, heat, ...)."""
+    db = _load("physics_variables")
+    q = query.lower()
+    out = []
+    for cls, data in db.items():
+        mod = cls.split("/")[2] if cls.count("/") >= 2 else ""
+        if module and module.lower() not in mod:
+            continue
+        cname = cls.split("/")[-1]
+        for v in data.get("variables", []):
+            hay = v["name"].lower() if name_only else (
+                v["name"] + " " + (v.get("expression") or "") + " " +
+                (v.get("descr") or "")).lower()
+            if q in hay:
+                out.append({"class": cname, "module": mod, "name": v["name"],
+                            "expression": (v.get("expression") or "")[:160],
+                            "statevar": v.get("label") == "STATEVAR"})
+                if len(out) >= limit:
+                    return out
+    return out
+
+
+def _discretization(interface_id: str) -> Optional[dict]:
+    disc = _load("discretization_index")
+    if interface_id in disc:
+        return disc[interface_id]
+    low = interface_id.lower()
+    for k, v in disc.items():
+        if k.lower() == low:
+            return v
+    return None
+
+
 def _merged_interface(interface_id: str) -> Optional[dict]:
     """Registry entry (plugin.xml tree) merged with resolved property schemas
     from completion data (per-feature props/subfeatures, interface-level props)."""
@@ -207,6 +245,39 @@ def register_static_catalog_tools(mcp) -> None:
                     "layer_types_with_schema": available[:80]}
         return {"layer": layer, "type": type_name, "properties": props,
                 "note": _LAYER_DOC.get(layer, "")}
+
+    @mcp.tool()
+    def static_catalog_variables(query: str, module: Optional[str] = None,
+                                 name_only: bool = False) -> dict:
+        """Search the offline physics VARIABLE dictionary: ~19,000 variables
+        with their defining expressions, extracted from the decompiled
+        physics-builder classes (all modules). Use it before writing
+        postprocessing expressions to discover what an interface defines.
+
+        Examples: query="eta" module="bfc" finds overpotential definitions
+        (eta = Ect-item.Eeq); query="itotavg" finds averaged current density.
+        statevar=true marks state variables (initial/update expressions).
+        Set name_only=True to match variable names only.
+        """
+        hits = _variables_search(query, module, name_only)
+        return {"query": query, "module": module, "n_hits": len(hits),
+                "variables": hits}
+
+    @mcp.tool()
+    def static_catalog_discretization(interface_id: str) -> dict:
+        """Default discretization (element orders per field + boundary-flux
+        switches) for a physics interface, from the offline static catalog.
+        Explains e.g. why LaminarFlow needs stabilization (P1P1 equal-order).
+
+        Example: interface_id="LithiumIonBatteryMPH" -> order_concentration=2,
+        order_electricpotential=2.
+        """
+        d = _discretization(interface_id)
+        if d is None:
+            disc = _load("discretization_index")
+            return {"error": f"no discretization entry for '{interface_id}'",
+                    "n_known": len(disc)}
+        return {"interface": interface_id, **d}
 
     @mcp.tool()
     def static_catalog_layer(layer: str) -> dict:
