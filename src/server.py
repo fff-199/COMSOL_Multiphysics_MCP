@@ -10,6 +10,7 @@ from .tools.parameters import register_parameter_tools
 from .tools.geometry import register_geometry_tools
 from .tools.physics import register_physics_tools
 from .tools.electrochemistry import register_electrochemistry_tools
+from .tools.static_catalog import register_static_catalog_tools
 from .tools.mesh import register_mesh_tools
 from .tools.study import register_study_tools
 from .tools.results import register_results_tools
@@ -34,6 +35,7 @@ def register_all_tools() -> None:
     register_geometry_tools(mcp)
     register_physics_tools(mcp)
     register_electrochemistry_tools(mcp)
+    register_static_catalog_tools(mcp)
     register_mesh_tools(mcp)
     register_study_tools(mcp)
     register_results_tools(mcp)
