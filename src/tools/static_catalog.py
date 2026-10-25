@@ -2,16 +2,15 @@
 
 Data source: the declarative registries shipped with every COMSOL install -
 plugins/com.comsol.*.jar plugin.xml (OSGi extension points) and
-data/completion/*.xml - extracted offline by scripts/generate_static_catalog.py.
-This covers ALL installed modules, not just electrochemistry, and includes
-license gating, supported space dimensions, feature nesting, multiphysics
-couplings, and per-layer type lists (geometry/mesh/solver/study/...).
+data/completion/*.xml - extracted offline by scripts/generate_static_catalog.py,
+including RESOLVED property schemas: completion tokens are decoded via the
+in-file <Properties>/<Features> dictionaries, so every physics feature type
+carries its property names, types and defaults (117k property rows on a full
+6.3 install). Covers ALL installed modules, not just electrochemistry.
 
-Use these tools to validate type names BEFORE calling the live create/feature
-tools (physics_add, physics_feature_create, electrochemistry_add_feature,
-multiphysics_add, ...), and to discover available types for any layer.
-Property NAME lists per feature are not statically available (props tokens in
-completion data are opaque); query a live session for those.
+Use these tools to validate type names AND discover property names BEFORE
+calling the live create/feature tools (physics_add, physics_feature_create,
+physics_feature_set, electrochemistry_add_feature, multiphysics_add, ...).
 """
 
 import json
@@ -91,6 +90,56 @@ def _layer_types(layer: str) -> list:
     return layers.get(layer)
 
 
+def _physics_schema(interface_id: str) -> Optional[dict]:
+    schemas = _load("physics_schemas")
+    if interface_id in schemas:
+        return schemas[interface_id]
+    low = interface_id.lower()
+    for k, v in schemas.items():
+        if k.lower() == low:
+            return v
+    return None
+
+
+def _layer_schema(layer: str, type_name: str) -> Optional[list]:
+    schemas = _load("layer_property_schemas")
+    sch = schemas.get(layer)
+    if not sch:
+        return None
+    if type_name in sch:
+        return sch[type_name]
+    low = type_name.lower()
+    for k, v in sch.items():
+        if k.lower() == low:
+            return v
+    return None
+
+
+def _merged_interface(interface_id: str) -> Optional[dict]:
+    """Registry entry (plugin.xml tree) merged with resolved property schemas
+    from completion data (per-feature props/subfeatures, interface-level props)."""
+    iface = _interface_features(interface_id)
+    if iface is None:
+        return None
+    schema = _physics_schema(iface["id"])
+    if schema is None:
+        return iface
+    iface["interface_props"] = schema.get("interface_props", {})
+    by_name = {f["name"]: f for f in schema.get("features", []) if "name" in f}
+    for f in iface["features"]:
+        s = by_name.get(f["id"])
+        if s:
+            if s.get("props"):
+                f["props"] = s["props"]
+            if s.get("subfeatures"):
+                f["subfeatures"] = s["subfeatures"]
+    extra = [f for f in schema.get("features", []) if f.get("name") not in
+             {x["id"] for x in iface["features"]}]
+    if extra:
+        iface["completion_only_features"] = extra
+    return iface
+
+
 def register_static_catalog_tools(mcp) -> None:
     """Register static catalog tools with the MCP server."""
     from mcp.server.fastmcp import FastMCP  # noqa: F401  (type kept local)
@@ -125,20 +174,39 @@ def register_static_catalog_tools(mcp) -> None:
 
     @mcp.tool()
     def static_catalog_features(interface_id: str) -> dict:
-        """List the full feature type tree of a physics interface from the
-        offline static catalog, including nesting (sub-features), domain levels
-        (domain/boundary/global) and singleton flags. No live session needed.
+        """List the feature types of a physics interface AND their property
+        schemas from the offline static catalog: feature names, nesting
+        (plugin.xml registry), domain levels, singleton flags, plus RESOLVED
+        property lists (name/type/default) per feature from completion data.
+        No live session needed.
 
-        Example: interface_id="SecondaryCurrentDistribution" shows
-        ElectrodeSurface, ExternalShort, PorousElectrodeReaction ... and their
-        allowed levels - exactly what electrochemistry_add_feature /
-        physics_feature_create accept for that interface.
+        Example: interface_id="LithiumIonBatteryMPH" shows PorousElectrode
+        with its 80+ properties (sigmal, Dl, taul, epsl, ...) - exactly what
+        physics_feature_set accepts for that feature.
         """
-        iface = _interface_features(interface_id)
+        iface = _merged_interface(interface_id)
         if iface is None:
             return {"error": f"interface '{interface_id}' not found; use "
                              "static_catalog_search to discover ids"}
         return iface
+
+    @mcp.tool()
+    def static_catalog_properties(layer: str, type_name: str) -> dict:
+        """Resolved property schema (name/type/default) for ONE feature type
+        of a modeling layer, from the offline static catalog. Layers:
+        geometry, mesh, solver, solver_sub, study, function, plot (limited),
+        numerical, dataset, export.
+
+        Example: layer="mesh", type_name="Size" -> hmax/hmin/hcurve/hgrad/
+        hnarrow/hauto/custom with types and defaults.
+        """
+        props = _layer_schema(layer, type_name)
+        if props is None:
+            available = sorted(_load("layer_property_schemas").get(layer, {}))
+            return {"error": f"no schema for '{type_name}' in layer '{layer}'",
+                    "layer_types_with_schema": available[:80]}
+        return {"layer": layer, "type": type_name, "properties": props,
+                "note": _LAYER_DOC.get(layer, "")}
 
     @mcp.tool()
     def static_catalog_layer(layer: str) -> dict:

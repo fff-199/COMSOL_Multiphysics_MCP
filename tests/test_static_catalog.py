@@ -7,8 +7,10 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.tools.static_catalog import (
     _catalog_info,
-    _interface_features,
+    _layer_schema,
     _layer_types,
+    _merged_interface,
+    _physics_schema,
     _search_couplings,
     _search_interfaces,
 )
@@ -18,7 +20,7 @@ def test_info_counts():
     info = _catalog_info()
     counts = info["counts"]
     assert counts["interfaces"] >= 250          # 291 on COMSOL 6.3 full install
-    assert counts["features"] >= 10000          # 14211 on COMSOL 6.3
+    assert counts["plugin_features"] >= 10000          # 14211 on COMSOL 6.3
     assert counts["couplings"] >= 100           # 170 on COMSOL 6.3
 
 
@@ -32,7 +34,7 @@ def test_search_battery_interfaces():
 
 
 def test_interface_feature_tree():
-    iface = _interface_features("SecondaryCurrentDistribution")
+    iface = _merged_interface("SecondaryCurrentDistribution")
     assert iface is not None
     feat_ids = [f["id"] for f in iface["features"]]
     assert "ElectrodeSurface" in feat_ids
@@ -60,6 +62,29 @@ def test_layers():
     assert func and "Interpolation" in func and "DNN" in func
     geom = _layer_types("geometry")
     assert geom and "Block" in geom and "WorkPlane" in geom
+
+
+def test_mesh_size_property_schema():
+    props = _layer_schema("mesh", "Size")
+    names = {p["name"] for p in props}
+    assert {"hmax", "hmin", "hcurve", "hgrad", "hnarrow", "hauto", "custom"} <= names
+    hauto = next(p for p in props if p["name"] == "hauto")
+    assert hauto["type"] == "Double" and hauto["default"] == "5"
+    hmaxa = next(p for p in props if p["name"] == "hmaxactive")
+    assert hmaxa["type"] == "Boolean" and hmaxa["default"] == "on"
+
+
+def test_physics_schema_resolved_props():
+    sch = _physics_schema("LithiumIonBatteryMPH")
+    assert sch is not None
+    pe = next(f for f in sch["features"] if f["name"] == "PorousElectrode")
+    names = {p["name"] for p in pe["props"]}
+    assert len(names) >= 70
+    assert {"sigmal", "Dl", "taul", "epsl"} <= names
+    # merged view: interface features carry resolved props
+    iface = _merged_interface("SecondaryCurrentDistribution")
+    es = next(f for f in iface["features"] if f["id"] == "ElectrodeSurface")
+    assert es.get("props"), "ElectrodeSurface missing resolved props"
 
 
 if __name__ == "__main__":
