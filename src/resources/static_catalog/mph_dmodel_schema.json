@@ -1,0 +1,2418 @@
+{
+ "propertyValue": {
+  "count": 5141,
+  "attrs": {
+   "T": 5141,
+   "name": 5141,
+   "value": 2330,
+   "valueMatrix": 1197,
+   "ReferenceContainerList": 1058,
+   "ReferenceArray": 504,
+   "CompositeIndex": 501,
+   "Reference": 253
+  }
+ },
+ "actions": {
+  "count": 3428,
+  "attrs": {
+   "T": 3428
+  }
+ },
+ "param": {
+  "count": 2117,
+  "attrs": {
+   "T": 2117,
+   "param": 2117,
+   "value": 2117,
+   "reference": 1085
+  }
+ },
+ "NodeDefaultValues": {
+  "count": 590,
+  "attrs": {}
+ },
+ "SolverFeatureList": {
+  "count": 590,
+  "attrs": {
+   "tag": 590,
+   "name": 590,
+   "created": 590
+  }
+ },
+ "SolverFeature": {
+  "count": 578,
+  "attrs": {
+   "op": 578,
+   "tag": 578,
+   "name": 578,
+   "created": 578,
+   "modified": 66
+  }
+ },
+ "defaultOrder": {
+  "count": 334,
+  "attrs": {
+   "T": 334
+  }
+ },
+ "isDefault": {
+  "count": 330,
+  "attrs": {
+   "T": 330
+  }
+ },
+ "childrenCount": {
+  "count": 216,
+  "attrs": {
+   "T": 216
+  }
+ },
+ "siblingOrder": {
+  "count": 195,
+  "attrs": {
+   "T": 195
+  }
+ },
+ "status": {
+  "count": 181,
+  "attrs": {
+   "T": 181
+  }
+ },
+ "isDefaultActive": {
+  "count": 141,
+  "attrs": {
+   "T": 141
+  }
+ },
+ "explicit": {
+  "count": 104,
+  "attrs": {
+   "geom": 104,
+   "dim": 65,
+   "hDim": 65,
+   "entities": 36
+  }
+ },
+ "selection": {
+  "count": 90,
+  "attrs": {
+   "T": 90,
+   "selection": 90,
+   "selType": 90,
+   "flags": 47
+  }
+ },
+ "key": {
+  "count": 86,
+  "attrs": {
+   "T": 86
+  }
+ },
+ "stringNames": {
+  "count": 66,
+  "attrs": {
+   "T": 66
+  }
+ },
+ "stringValues": {
+  "count": 66,
+  "attrs": {
+   "T": 66
+  }
+ },
+ "PhysicsProp": {
+  "count": 64,
+  "attrs": {
+   "tag": 64,
+   "name": 64,
+   "created": 64,
+   "modified": 6
+  }
+ },
+ "FeatureInfoList": {
+  "count": 61,
+  "attrs": {
+   "tag": 61,
+   "name": 61,
+   "created": 61
+  }
+ },
+ "FeatureInfo": {
+  "count": 61,
+  "attrs": {
+   "tag": 61,
+   "name": 61,
+   "created": 61,
+   "modified": 25
+  }
+ },
+ "ModelEntityTag": {
+  "count": 56,
+  "attrs": {
+   "tag": 56,
+   "created": 56
+  }
+ },
+ "values": {
+  "count": 56,
+  "attrs": {
+   "T": 56
+  }
+ },
+ "expressions": {
+  "count": 53,
+  "attrs": {
+   "T": 53,
+   "name": 53,
+   "expr": 53,
+   "descr": 43
+  }
+ },
+ "Information": {
+  "count": 53,
+  "attrs": {
+   "tag": 53,
+   "name": 53,
+   "created": 53,
+   "modified": 10
+  }
+ },
+ "title": {
+  "count": 53,
+  "attrs": {
+   "T": 53
+  }
+ },
+ "body": {
+  "count": 53,
+  "attrs": {
+   "T": 53
+  }
+ },
+ "PhysicsFeatureList": {
+  "count": 50,
+  "attrs": {
+   "tag": 50,
+   "name": 50,
+   "created": 50
+  }
+ },
+ "base": {
+  "count": 47,
+  "attrs": {
+   "T": 34,
+   "geom": 13,
+   "dim": 9
+  }
+ },
+ "PhysicsFeature": {
+  "count": 46,
+  "attrs": {
+   "op": 46,
+   "tag": 46,
+   "name": 46,
+   "created": 46,
+   "modified": 21
+  }
+ },
+ "edim": {
+  "count": 46,
+  "attrs": {
+   "T": 46
+  }
+ },
+ "intNames": {
+  "count": 42,
+  "attrs": {
+   "T": 42
+  }
+ },
+ "intValues": {
+  "count": 42,
+  "attrs": {
+   "T": 42
+  }
+ },
+ "PhysicsField": {
+  "count": 36,
+  "attrs": {
+   "tag": 36,
+   "created": 36,
+   "modified": 1
+  }
+ },
+ "applfieldID": {
+  "count": 36,
+  "attrs": {
+   "T": 36
+  }
+ },
+ "components": {
+  "count": 36,
+  "attrs": {
+   "T": 36
+  }
+ },
+ "fieldname": {
+  "count": 36,
+  "attrs": {
+   "T": 36
+  }
+ },
+ "boolNames": {
+  "count": 34,
+  "attrs": {
+   "T": 34
+  }
+ },
+ "boolValues": {
+  "count": 34,
+  "attrs": {
+   "T": 34
+  }
+ },
+ "Selection": {
+  "count": 32,
+  "attrs": {
+   "selection": 32,
+   "selType": 32
+  }
+ },
+ "StudyFeatureList": {
+  "count": 30,
+  "attrs": {
+   "tag": 30,
+   "name": 30,
+   "created": 30
+  }
+ },
+ "default": {
+  "count": 28,
+  "attrs": {
+   "T": 28
+  }
+ },
+ "type": {
+  "count": 28,
+  "attrs": {
+   "T": 28
+  }
+ },
+ "doubleNames": {
+  "count": 28,
+  "attrs": {
+   "T": 28
+  }
+ },
+ "doubleValues": {
+  "count": 28,
+  "attrs": {
+   "T": 28
+  }
+ },
+ "geom": {
+  "count": 27,
+  "attrs": {
+   "T": 27,
+   "class": 9,
+   "resource": 9,
+   "id": 9,
+   "fileid": 9
+  }
+ },
+ "buildStatus": {
+  "count": 26,
+  "attrs": {
+   "T": 26
+  }
+ },
+ "studyType": {
+  "count": 25,
+  "attrs": {
+   "T": 25
+  }
+ },
+ "assocID": {
+  "count": 25,
+  "attrs": {
+   "T": 25
+  }
+ },
+ "sequence": {
+  "count": 25,
+  "attrs": {
+   "T": 25
+  }
+ },
+ "spaceDim": {
+  "count": 22,
+  "attrs": {
+   "T": 22
+  }
+ },
+ "numEntities": {
+  "count": 22,
+  "attrs": {
+   "T": 22
+  }
+ },
+ "numEntitiesMesh": {
+  "count": 22,
+  "attrs": {
+   "T": 22
+  }
+ },
+ "numFiniteVoids": {
+  "count": 22,
+  "attrs": {
+   "T": 22
+  }
+ },
+ "geomTol": {
+  "count": 22,
+  "attrs": {
+   "T": 22
+  }
+ },
+ "boundingBox": {
+  "count": 22,
+  "attrs": {
+   "T": 22
+  }
+ },
+ "resetStateKey": {
+  "count": 22,
+  "attrs": {
+   "T": 22
+  }
+ },
+ "geomScale": {
+  "count": 21,
+  "attrs": {
+   "T": 21
+  }
+ },
+ "GeomNative": {
+  "count": 20,
+  "attrs": {
+   "tag": 20,
+   "created": 20
+  }
+ },
+ "voidsLabeled": {
+  "count": 20,
+  "attrs": {
+   "T": 20
+  }
+ },
+ "doubleArrNames": {
+  "count": 20,
+  "attrs": {
+   "T": 20
+  }
+ },
+ "doubleArrValues": {
+  "count": 20,
+  "attrs": {
+   "T": 20
+  }
+ },
+ "SolutionInfo": {
+  "count": 20,
+  "attrs": {
+   "tag": 20,
+   "created": 20,
+   "name": 12,
+   "modified": 8
+  }
+ },
+ "GeomFeatureList": {
+  "count": 19,
+  "attrs": {
+   "tag": 19,
+   "name": 19,
+   "created": 19
+  }
+ },
+ "InformationList": {
+  "count": 19,
+  "attrs": {
+   "tag": 19,
+   "name": 19,
+   "created": 19
+  }
+ },
+ "GeomObjectList": {
+  "count": 18,
+  "attrs": {
+   "tag": 18,
+   "created": 18,
+   "name": 1
+  }
+ },
+ "GeomObject": {
+  "count": 18,
+  "attrs": {
+   "tag": 18,
+   "name": 18,
+   "created": 18,
+   "modified": 1
+  }
+ },
+ "ExportFeatureList": {
+  "count": 18,
+  "attrs": {
+   "tag": 18,
+   "name": 18,
+   "created": 18
+  }
+ },
+ "GeomFeature": {
+  "count": 17,
+  "attrs": {
+   "op": 17,
+   "tag": 17,
+   "name": 17,
+   "created": 17,
+   "modified": 2
+  }
+ },
+ "id": {
+  "count": 17,
+  "attrs": {
+   "T": 17
+  }
+ },
+ "cacheTag": {
+  "count": 17,
+  "attrs": {
+   "T": 17
+  }
+ },
+ "consumers": {
+  "count": 17,
+  "attrs": {
+   "T": 17
+  }
+ },
+ "hashKey": {
+  "count": 17,
+  "attrs": {
+   "T": 17
+  }
+ },
+ "object": {
+  "count": 16,
+  "attrs": {
+   "flags": 16,
+   "assocId": 16,
+   "geom": 10,
+   "entities": 10,
+   "feature": 6
+  }
+ },
+ "MeshFeatureList": {
+  "count": 16,
+  "attrs": {
+   "tag": 16,
+   "name": 16,
+   "created": 16,
+   "modified": 2
+  }
+ },
+ "pNames": {
+  "count": 16,
+  "attrs": {
+   "T": 16
+  }
+ },
+ "pUnits": {
+  "count": 16,
+  "attrs": {
+   "T": 16
+  }
+ },
+ "looplevel": {
+  "count": 16,
+  "attrs": {
+   "T": 16
+  }
+ },
+ "pNamesOuter": {
+  "count": 16,
+  "attrs": {
+   "T": 16
+  }
+ },
+ "pUnitsOuter": {
+  "count": 16,
+  "attrs": {
+   "T": 16
+  }
+ },
+ "pDescsOuter": {
+  "count": 16,
+  "attrs": {
+   "T": 16
+  }
+ },
+ "oldAnalysisType": {
+  "count": 16,
+  "attrs": {
+   "T": 16
+  }
+ },
+ "ExportFeature": {
+  "count": 16,
+  "attrs": {
+   "op": 16,
+   "tag": 16,
+   "name": 16,
+   "created": 16
+  }
+ },
+ "Study": {
+  "count": 15,
+  "attrs": {
+   "tag": 15,
+   "name": 15,
+   "created": 15,
+   "modified": 3
+  }
+ },
+ "StudyFeature": {
+  "count": 15,
+  "attrs": {
+   "op": 15,
+   "tag": 15,
+   "name": 15,
+   "created": 15,
+   "modified": 4
+  }
+ },
+ "MultigridLevelList": {
+  "count": 15,
+  "attrs": {
+   "tag": 15,
+   "name": 15,
+   "created": 15
+  }
+ },
+ "DatasetFeatureList": {
+  "count": 15,
+  "attrs": {
+   "tag": 15,
+   "name": 15,
+   "created": 15
+  }
+ },
+ "baseSystemCompute": {
+  "count": 15,
+  "attrs": {
+   "T": 15
+  }
+ },
+ "SketchSnapshotData": {
+  "count": 14,
+  "attrs": {
+   "tag": 14,
+   "created": 14
+  }
+ },
+ "intArrNames": {
+  "count": 14,
+  "attrs": {
+   "T": 14
+  }
+ },
+ "intArrValues": {
+  "count": 14,
+  "attrs": {
+   "T": 14
+  }
+ },
+ "MeshFeature": {
+  "count": 14,
+  "attrs": {
+   "op": 14,
+   "tag": 14,
+   "name": 14,
+   "created": 14,
+   "modified": 7
+  }
+ },
+ "DatasetFeature": {
+  "count": 13,
+  "attrs": {
+   "op": 13,
+   "tag": 13,
+   "name": 13,
+   "created": 13,
+   "modified": 8
+  }
+ },
+ "SolverSequence": {
+  "count": 12,
+  "attrs": {
+   "tag": 12,
+   "name": 12,
+   "created": 12,
+   "modified": 8
+  }
+ },
+ "study": {
+  "count": 12,
+  "attrs": {
+   "T": 12
+  }
+ },
+ "solType": {
+  "count": 12,
+  "attrs": {
+   "T": 12
+  }
+ },
+ "ResultFeatureList": {
+  "count": 12,
+  "attrs": {
+   "tag": 12,
+   "name": 12,
+   "created": 12
+  }
+ },
+ "existing": {
+  "count": 11,
+  "attrs": {
+   "T": 11
+  }
+ },
+ "attachedFlag": {
+  "count": 11,
+  "attrs": {
+   "T": 11
+  }
+ },
+ "currentFeature": {
+  "count": 10,
+  "attrs": {
+   "T": 10
+  }
+ },
+ "ResultFeature": {
+  "count": 10,
+  "attrs": {
+   "op": 10,
+   "tag": 10,
+   "name": 10,
+   "created": 10,
+   "modified": 10
+  }
+ },
+ "identifier": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "Frame": {
+  "count": 8,
+  "attrs": {
+   "tag": 8,
+   "created": 8,
+   "name": 1,
+   "modified": 1
+  }
+ },
+ "FrameFeatureList": {
+  "count": 8,
+  "attrs": {
+   "tag": 8,
+   "name": 8,
+   "created": 8
+  }
+ },
+ "lastComputationTime": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "lastComputationDate": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "lastComputationVersion": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "solutionnative": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "paramNames": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "paramVals": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "paramUnits": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "pLists": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "SolutionNative": {
+  "count": 8,
+  "attrs": {
+   "tag": 8,
+   "created": 8,
+   "modified": 8
+  }
+ },
+ "pName": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "solnumDescriptions": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "analysisType": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "tListReal": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "tListImag": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "tDescr": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "plistContMap": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "counter": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "unit": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "solution": {
+  "count": 8,
+  "attrs": {
+   "T": 8,
+   "class": 8,
+   "resource": 8,
+   "id": 8,
+   "fileid": 8
+  }
+ },
+ "solutionStatic": {
+  "count": 8,
+  "attrs": {
+   "T": 8,
+   "class": 8,
+   "resource": 8,
+   "id": 8,
+   "fileid": 8
+  }
+ },
+ "totalSize": {
+  "count": 8,
+  "attrs": {
+   "T": 8
+  }
+ },
+ "consumer": {
+  "count": 7,
+  "attrs": {
+   "T": 7
+  }
+ },
+ "ViewFeatureList": {
+  "count": 7,
+  "attrs": {
+   "tag": 7,
+   "name": 7,
+   "created": 7
+  }
+ },
+ "assocConfig": {
+  "count": 6,
+  "attrs": {
+   "T": 6
+  }
+ },
+ "SketchObject": {
+  "count": 6,
+  "attrs": {
+   "tag": 6,
+   "created": 6
+  }
+ },
+ "FrameFeature": {
+  "count": 6,
+  "attrs": {
+   "tag": 6,
+   "created": 6
+  }
+ },
+ "refFrame": {
+  "count": 6,
+  "attrs": {
+   "T": 6
+  }
+ },
+ "removableFrame": {
+  "count": 6,
+  "attrs": {
+   "T": 6
+  }
+ },
+ "ViewFeature": {
+  "count": 6,
+  "attrs": {
+   "op": 6,
+   "tag": 6,
+   "name": 6,
+   "created": 6,
+   "modified": 1
+  }
+ },
+ "MeshSelectionFeatureList": {
+  "count": 6,
+  "attrs": {
+   "tag": 6,
+   "name": 6,
+   "created": 6
+  }
+ },
+ "FunctionFeatureList": {
+  "count": 5,
+  "attrs": {
+   "tag": 5,
+   "name": 5,
+   "created": 5
+  }
+ },
+ "contrib": {
+  "count": 5,
+  "attrs": {
+   "T": 5
+  }
+ },
+ "Physics": {
+  "count": 4,
+  "attrs": {
+   "op": 4,
+   "tag": 4,
+   "name": 4,
+   "created": 4
+  }
+ },
+ "PhysicsFieldList": {
+  "count": 4,
+  "attrs": {
+   "tag": 4,
+   "name": 4,
+   "created": 4
+  }
+ },
+ "PhysicsPropList": {
+  "count": 4,
+  "attrs": {
+   "tag": 4,
+   "name": 4,
+   "created": 4
+  }
+ },
+ "storedParent": {
+  "count": 4,
+  "attrs": {
+   "T": 4
+  }
+ },
+ "current": {
+  "count": 4,
+  "attrs": {
+   "T": 4
+  }
+ },
+ "sdim": {
+  "count": 4,
+  "attrs": {
+   "T": 4
+  }
+ },
+ "NodeGroupList": {
+  "count": 4,
+  "attrs": {
+   "tag": 4,
+   "name": 4,
+   "created": 4
+  }
+ },
+ "intMatNames": {
+  "count": 4,
+  "attrs": {
+   "T": 4
+  }
+ },
+ "intMatValues": {
+  "count": 4,
+  "attrs": {
+   "T": 4
+  }
+ },
+ "CommonList": {
+  "count": 4,
+  "attrs": {
+   "tag": 4,
+   "name": 4,
+   "created": 4
+  }
+ },
+ "ComponentProbeFeatureList": {
+  "count": 4,
+  "attrs": {
+   "tag": 4,
+   "name": 4,
+   "created": 4
+  }
+ },
+ "OptFeatureList": {
+  "count": 4,
+  "attrs": {
+   "op": 4,
+   "tag": 4,
+   "name": 4,
+   "created": 4
+  }
+ },
+ "optListType": {
+  "count": 4,
+  "attrs": {
+   "T": 4
+  }
+ },
+ "ProbeFeatureList": {
+  "count": 4,
+  "attrs": {
+   "tag": 4,
+   "name": 4,
+   "created": 4
+  }
+ },
+ "NumericalFeatureList": {
+  "count": 4,
+  "attrs": {
+   "tag": 4,
+   "name": 4,
+   "created": 4
+  }
+ },
+ "realData": {
+  "count": 4,
+  "attrs": {
+   "T": 4
+  }
+ },
+ "imagData": {
+  "count": 4,
+  "attrs": {
+   "T": 4
+  }
+ },
+ "CoordsysList": {
+  "count": 4,
+  "attrs": {
+   "tag": 4,
+   "name": 4,
+   "created": 4
+  }
+ },
+ "FileResource": {
+  "count": 4,
+  "attrs": {
+   "tag": 4,
+   "created": 4
+  }
+ },
+ "ignoreWhenResettingHistory": {
+  "count": 4,
+  "attrs": {
+   "T": 4
+  }
+ },
+ "cad": {
+  "count": 4,
+  "attrs": {
+   "T": 4
+  }
+ },
+ "hasCadRep": {
+  "count": 4,
+  "attrs": {
+   "T": 4
+  }
+ },
+ "lastBuiltFeature": {
+  "count": 3,
+  "attrs": {
+   "T": 3
+  }
+ },
+ "MaterialList": {
+  "count": 3,
+  "attrs": {
+   "tag": 3,
+   "name": 3,
+   "created": 3
+  }
+ },
+ "TableFeatureList": {
+  "count": 3,
+  "attrs": {
+   "tag": 3,
+   "name": 3,
+   "created": 3
+  }
+ },
+ "ConstrList": {
+  "count": 3,
+  "attrs": {
+   "tag": 3,
+   "name": 3,
+   "created": 3,
+   "op": 1
+  }
+ },
+ "MeshProblemFeatureList": {
+  "count": 3,
+  "attrs": {
+   "tag": 3,
+   "name": 3,
+   "created": 3
+  }
+ },
+ "Model": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2,
+   "modified": 2
+  }
+ },
+ "fontsize": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "fontfamily": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "comsolVersion": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "baseSystem": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "srl": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "savedInVersion": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "ModelParam": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2,
+   "modified": 1
+  }
+ },
+ "visible": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "ModelParamGroupList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ModelParamGroup": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ModelParamGroupCaseList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "PhysicsList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "GeomList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "GeomSequence": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2,
+   "modified": 1
+  }
+ },
+ "angularUnit": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "assocMaps": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "inverseAssocMaps": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "externallySet": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "geometryFrame": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "geomInfo": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "geomrep": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "lengthUnit": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "materialFrame": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "meshFrame": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "spatialFrame": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "sequenceType": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "finGeomBuilt": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "GeomObjectSelectionFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "GeomAttributeList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "GeomAttribute": {
+  "count": 2,
+  "attrs": {
+   "op": 2,
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "FunctionFeature": {
+  "count": 2,
+  "attrs": {
+   "op": 2,
+   "tag": 2,
+   "name": 2,
+   "created": 2,
+   "modified": 1
+  }
+ },
+ "hasUnit_location": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "hasUnit_from": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "hasUnit_to": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "hasUnit_smooth": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "ExprList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "CplList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "FrameList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "sorder": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "SelectionList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "PairList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ExtraDimList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ViewList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "globalCurrent": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "View": {
+  "count": 2,
+  "attrs": {
+   "op": 2,
+   "tag": 2,
+   "name": 2,
+   "created": 2,
+   "modified": 1
+  }
+ },
+ "HideDrawList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "HideGeomList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "HideMeshList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "CommonFeature": {
+  "count": 2,
+  "attrs": {
+   "op": 2,
+   "tag": 2,
+   "name": 2,
+   "created": 2,
+   "modified": 1
+  }
+ },
+ "MultiphysicsCouplingList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ModelNodeList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ModelNode": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "defineLocalCoord": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "defineAllFrames": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "spatialCoord": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "materialCoord": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "geometryCoord": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "meshCoord": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "ComponentExprList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentGeomList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentMeshList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentMultiphysicsCouplingList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentPairList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentPhysicsList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentCommonList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentCoordsysList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentCplList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentEmbGeomFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentExtraDimList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentFunctionFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentMaterialList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentSelectionList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ComponentViewList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "FieldList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "OdeList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "Thermodynamics": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ThermodynamicsFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "MeshList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "MeshSequence": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2,
+   "modified": 1
+  }
+ },
+ "autogenerated": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "constructionEntitiesToKeep": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "cacheTagCurrent": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "statIgnoreAssocData": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "remaining": {
+  "count": 2,
+  "attrs": {}
+ },
+ "MeshNative": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "created": 2
+  }
+ },
+ "mesh": {
+  "count": 2,
+  "attrs": {
+   "T": 2,
+   "class": 2,
+   "resource": 2,
+   "id": 2,
+   "fileid": 2
+  }
+ },
+ "BatchList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "BatchFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "batchList": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "OptSequence": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "created": 2
+  }
+ },
+ "StudyList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "SolverSequenceList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "Results": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2,
+   "modified": 1
+  }
+ },
+ "ConfigurationFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "EvaluationGroupFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ResultParam": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ColorTableFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ReportFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "GeomManagerNative": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "created": 2,
+   "modified": 1
+  }
+ },
+ "lastID": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "geomManager": {
+  "count": 2,
+  "attrs": {
+   "T": 2,
+   "class": 2,
+   "resource": 2,
+   "id": 2,
+   "fileid": 2
+  }
+ },
+ "History": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "created": 2
+  }
+ },
+ "HistoryBlock": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "created": 2
+  }
+ },
+ "Coordsys": {
+  "count": 2,
+  "attrs": {
+   "op": 2,
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "EmbGeomFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "FormFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "SavePointDataList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ElemList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ShapeList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "FileResourceList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ReducedModelList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2,
+   "modified": 1
+  }
+ },
+ "GroupList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ExternalInterfaceFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "InitList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "IntRuleList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "ElementSetList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "BEMFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "WeakList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "AppBuilderFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "SolutionData": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "created": 2
+  }
+ },
+ "GeometryAnalysisFeature": {
+  "count": 2,
+  "attrs": {
+   "op": 2,
+   "tag": 2,
+   "name": 2,
+   "created": 2,
+   "modified": 2
+  }
+ },
+ "cacheTagAnalyzed": {
+  "count": 2,
+  "attrs": {
+   "T": 2
+  }
+ },
+ "SolverProblemFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "NumericalFeature": {
+  "count": 2,
+  "attrs": {
+   "op": 2,
+   "tag": 2,
+   "name": 2,
+   "created": 2,
+   "modified": 2
+  }
+ },
+ "ResultProblemFeatureList": {
+  "count": 2,
+  "attrs": {
+   "tag": 2,
+   "name": 2,
+   "created": 2
+  }
+ },
+ "modelTitle": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "modelDescription": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "modelPath": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "sketchStatus": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "SketchSnapshotDataList": {
+  "count": 1,
+  "attrs": {
+   "tag": 1,
+   "name": 1,
+   "created": 1
+  }
+ },
+ "isnew": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "toolsSize": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "TableFeature": {
+  "count": 1,
+  "attrs": {
+   "op": 1,
+   "tag": 1,
+   "name": 1,
+   "created": 1
+  }
+ },
+ "columnHeaders": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "rowHeaders": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "xmeshIndex": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "designBooleans": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "autoAnalyze": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "cacheTagImported": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "cleanuptime": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "detailstat": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "computedSizeId": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "computedSize": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "computedDiameter": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "numFinEnt": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "MaxFac": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "MinFac": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "MaxDom": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "Weights": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "hasUnit_plotlowerlimit": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "hasUnit_plotupperlimit": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "Material": {
+  "count": 1,
+  "attrs": {
+   "op": 1,
+   "tag": 1,
+   "name": 1,
+   "created": 1
+  }
+ },
+ "MaterialModelList": {
+  "count": 1,
+  "attrs": {
+   "tag": 1,
+   "name": 1,
+   "created": 1
+  }
+ },
+ "MaterialModel": {
+  "count": 1,
+  "attrs": {
+   "op": 1,
+   "tag": 1,
+   "name": 1,
+   "created": 1,
+   "modified": 1
+  }
+ },
+ "built": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "buildInfo": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "buildTime": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "buildOutput": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "MeshProblemFeature": {
+  "count": 1,
+  "attrs": {
+   "op": 1,
+   "tag": 1,
+   "name": 1,
+   "created": 1
+  }
+ },
+ "problemId": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "problemMeshNEnt": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "SolverProblemFeature": {
+  "count": 1,
+  "attrs": {
+   "op": 1,
+   "tag": 1,
+   "name": 1,
+   "created": 1
+  }
+ },
+ "windowtags": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "windowtitles": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "sourceMesh": {
+  "count": 1,
+  "attrs": {}
+ },
+ "ignoreAssocData": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "ResultProblemFeature": {
+  "count": 1,
+  "attrs": {
+   "op": 1,
+   "tag": 1,
+   "name": 1,
+   "created": 1
+  }
+ },
+ "EnvmapManager": {
+  "count": 1,
+  "attrs": {
+   "tag": 1,
+   "created": 1
+  }
+ },
+ "sstags2remove": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "MethodCallFeatureList": {
+  "count": 1,
+  "attrs": {
+   "tag": 1,
+   "name": 1,
+   "created": 1
+  }
+ },
+ "UnitSystemList": {
+  "count": 1,
+  "attrs": {
+   "tag": 1,
+   "name": 1,
+   "created": 1
+  }
+ },
+ "solnumDescriptionsNonUnique": {
+  "count": 1,
+  "attrs": {
+   "T": 1
+  }
+ },
+ "AppNodeGroupList": {
+  "count": 1,
+  "attrs": {
+   "tag": 1,
+   "name": 1,
+   "created": 1
+  }
+ },
+ "EventList": {
+  "count": 1,
+  "attrs": {
+   "tag": 1,
+   "name": 1,
+   "created": 1
+  }
+ },
+ "CoeffList": {
+  "count": 1,
+  "attrs": {
+   "tag": 1,
+   "name": 1,
+   "created": 1
+  }
+ }
+}

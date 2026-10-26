@@ -12,6 +12,8 @@ from .tools.physics import register_physics_tools
 from .tools.electrochemistry import register_electrochemistry_tools
 from .tools.static_catalog import register_static_catalog_tools
 from .tools.physicsbuilder import register_physicsbuilder_tools
+from .tools.simknowledge import register_simknowledge_tools
+from .tools.knowledge_query import register_knowledge_query_tools
 from .tools.mesh import register_mesh_tools
 from .tools.study import register_study_tools
 from .tools.results import register_results_tools
@@ -38,6 +40,8 @@ def register_all_tools() -> None:
     register_electrochemistry_tools(mcp)
     register_static_catalog_tools(mcp)
     register_physicsbuilder_tools(mcp)
+    register_simknowledge_tools(mcp)
+    register_knowledge_query_tools(mcp)
     register_mesh_tools(mcp)
     register_study_tools(mcp)
     register_results_tools(mcp)

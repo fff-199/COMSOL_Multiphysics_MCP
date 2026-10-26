@@ -1,0 +1,259 @@
+{
+ "Material": {
+  "descr": "Material",
+  "id": "mat",
+  "props": [
+   {
+    "name": "thickness",
+    "type": "Double"
+   },
+   {
+    "name": "sys",
+    "type": "String",
+    "default": "none"
+   },
+   {
+    "name": "middlePlane",
+    "type": "String",
+    "default": "middle"
+   },
+   {
+    "name": "offset",
+    "type": "Double"
+   },
+   {
+    "name": "stack",
+    "type": "String",
+    "default": "none"
+   },
+   {
+    "name": "stackAlign",
+    "type": "Boolean",
+    "default": "on"
+   },
+   {
+    "name": "orientLine",
+    "type": "Boolean",
+    "default": "on"
+   },
+   {
+    "name": "widthRatio",
+    "type": "Double"
+   },
+   {
+    "name": "showLabels",
+    "type": "Boolean",
+    "default": "on"
+   },
+   {
+    "name": "family",
+    "type": "String",
+    "default": "plastic"
+   },
+   {
+    "name": "customize",
+    "type": "None"
+   },
+   {
+    "name": "color",
+    "type": "String",
+    "default": "white"
+   },
+   {
+    "name": "customcolor",
+    "type": "DoubleArray"
+   },
+   {
+    "name": "specular",
+    "type": "String",
+    "default": "white"
+   },
+   {
+    "name": "customspecular",
+    "type": "DoubleArray"
+   },
+   {
+    "name": "diffuse",
+    "type": "String",
+    "default": "white"
+   },
+   {
+    "name": "customdiffuse",
+    "type": "DoubleArray"
+   },
+   {
+    "name": "ambient",
+    "type": "String",
+    "default": "white"
+   },
+   {
+    "name": "customambient",
+    "type": "DoubleArray"
+   },
+   {
+    "name": "basis",
+    "type": "String",
+    "default": "off"
+   },
+   {
+    "name": "scale",
+    "type": "Double"
+   },
+   {
+    "name": "origin",
+    "type": "DoubleArray"
+   },
+   {
+    "name": "basisx",
+    "type": "DoubleArray"
+   },
+   {
+    "name": "specifybasisy",
+    "type": "String",
+    "default": "off"
+   },
+   {
+    "name": "basisy",
+    "type": "DoubleArray"
+   },
+   {
+    "name": "noise",
+    "type": "String",
+    "default": "off"
+   },
+   {
+    "name": "normalnoisetype",
+    "type": "String",
+    "default": "0"
+   },
+   {
+    "name": "noisescale",
+    "type": "Double"
+   },
+   {
+    "name": "noisefreq",
+    "type": "Double"
+   },
+   {
+    "name": "normalnoisebrush",
+    "type": "String",
+    "default": "0"
+   },
+   {
+    "name": "colornoise",
+    "type": "String",
+    "default": "off"
+   },
+   {
+    "name": "colornoisetype",
+    "type": "String",
+    "default": "0"
+   },
+   {
+    "name": "colornoisescale",
+    "type": "Double"
+   },
+   {
+    "name": "colornoisefrequency",
+    "type": "Double"
+   },
+   {
+    "name": "colornoisebrush",
+    "type": "String",
+    "default": "0"
+   },
+   {
+    "name": "noisecolor",
+    "type": "String",
+    "default": "black"
+   },
+   {
+    "name": "customnoisecolor",
+    "type": "DoubleArray"
+   },
+   {
+    "name": "noisecolorblend",
+    "type": "Double"
+   },
+   {
+    "name": "colornoisenormalscale",
+    "type": "Double"
+   },
+   {
+    "name": "transparency",
+    "type": "Double"
+   },
+   {
+    "name": "uniformblending",
+    "type": "Double"
+   },
+   {
+    "name": "lighting",
+    "type": "String",
+    "default": "simple"
+   },
+   {
+    "name": "fresnel",
+    "type": "Double"
+   },
+   {
+    "name": "roughness",
+    "type": "Double"
+   },
+   {
+    "name": "anisotropy",
+    "type": "Double"
+   },
+   {
+    "name": "flipanisotropy",
+    "type": "Boolean",
+    "default": "off"
+   },
+   {
+    "name": "anisotropyaxis",
+    "type": "DoubleArray"
+   },
+   {
+    "name": "metallic",
+    "type": "Double"
+   },
+   {
+    "name": "pearl",
+    "type": "Double"
+   },
+   {
+    "name": "diffusewrap",
+    "type": "Double"
+   },
+   {
+    "name": "clearcoat",
+    "type": "Double"
+   },
+   {
+    "name": "reflectance",
+    "type": "Double"
+   },
+   {
+    "name": "ambientscale",
+    "type": "Double"
+   },
+   {
+    "name": "shininess",
+    "type": "Double"
+   },
+   {
+    "name": "phase",
+    "type": "String",
+    "default": "undefined"
+   },
+   {
+    "name": "orientation",
+    "type": "String"
+   },
+   {
+    "name": "info",
+    "type": "StringMatrix"
+   }
+  ]
+ }
+}

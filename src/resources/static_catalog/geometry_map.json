@@ -1,0 +1,2370 @@
+{
+ "sequence_level": {
+  "props": [
+   "scale",
+   "lengthunit",
+   "angularunit",
+   "repairtoltype=auto",
+   "repairtol",
+   "absrepairtol",
+   "autoBuildNew",
+   "autorebuild"
+  ],
+  "note": "tolerance auto mode: repairtoltype auto|relative|absolute"
+ },
+ "finalize": {
+  "op": "FormUnion (default) / FormAssembly",
+  "props": {
+   "action": "union|assembly",
+   "imprint": "bool (assembly only)",
+   "createpairs": "on default - SKIPPED inside Parts/WorkPlanes",
+   "splitpairs": "bool",
+   "pairtype": "identity|contact",
+   "frame": "frame for identity pairs",
+   "repairtoltype": "tolerance mode"
+  },
+  "pairs_note": "assembly + createpairs -> identity pairs auto-named pairsN; Part/WorkPlane geometries never auto-pair (decompiled OpGeomFinalize)"
+ },
+ "kernels": {
+  "found": [
+   "COMSOL native",
+   "Parasolid (data/runtime/cad_p*.isa on-demand)",
+   "ACIS Interop (csacisioputil.dll)"
+  ],
+  "note": "Java-side kernel selection string not found in plugin jars - lives in native cghandler layer"
+ },
+ "categories": {
+  "boolean": [
+   {
+    "type": "Compose",
+    "props": [
+     "input",
+     "keep",
+     "formula",
+     "intbnd",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Difference",
+    "props": [
+     "input",
+     "input2",
+     "keepadd",
+     "keepsubtract",
+     "intbnd",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Intersection",
+    "props": [
+     "input",
+     "keep",
+     "intbnd",
+     "keeplowerdim",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Partition",
+    "props": [
+     "input",
+     "tool",
+     "keepinput",
+     "keeptool",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "PartitionDomains",
+    "props": [
+     "domain",
+     "partitionwith",
+     "vertexsegment",
+     "vertexline",
+     "edge",
+     "extendededge",
+     "object",
+     "keepobject",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "propagatesel",
+     "buildtime"
+    ]
+   },
+   {
+    "type": "PartitionEdges",
+    "props": [
+     "edge",
+     "position",
+     "param",
+     "vertexproj",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "PartitionFaces",
+    "props": [
+     "face",
+     "partitionwith",
+     "vertexsegment",
+     "extendededge",
+     "workplane",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Union",
+    "props": [
+     "input",
+     "keep",
+     "intbnd",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   }
+  ],
+  "build_from_2d": [
+   {
+    "type": "Extrude",
+    "props": [
+     "extrudefrom",
+     "workplane",
+     "input",
+     "inputface",
+     "inputedge",
+     "inputvertex",
+     "inputhandling",
+     "specify",
+     "distance",
+     "reverse",
+     "vertex",
+     "includeinput",
+     "crossfaces",
+     "scale",
+     "displ",
+     "twist",
+     "selresult",
+     "selresultshow"
+    ]
+   },
+   {
+    "type": "Loft",
+    "props": [
+     "profile",
+     "startprofile",
+     "endprofile",
+     "guide",
+     "startguide",
+     "endguide",
+     "periodic",
+     "unite",
+     "type",
+     "removeredundant",
+     "crossfaces",
+     "facepartitioning",
+     "startprofiledir",
+     "startprofilerel",
+     "startprofileangle",
+     "endprofiledir",
+     "endprofilerel",
+     "endprofileangle"
+    ]
+   },
+   {
+    "type": "Midsurface",
+    "props": [
+     "input",
+     "keep",
+     "repair",
+     "split",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Offset",
+    "props": [
+     "input",
+     "keep",
+     "distance",
+     "reverse",
+     "convexcorner",
+     "trim",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "OffsetFaces",
+    "props": [
+     "face",
+     "keep",
+     "subtractinput",
+     "distance",
+     "reverse",
+     "fillet",
+     "perpstepedges",
+     "stepfaces",
+     "exceptendfacesmerged",
+     "overflow",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Revolve",
+    "props": [
+     "revolvefrom",
+     "workplane",
+     "input",
+     "inputface",
+     "inputedge",
+     "inputvertex",
+     "inputhandling",
+     "angtype",
+     "origfaces",
+     "angle1",
+     "angle2",
+     "axistype",
+     "pos",
+     "axis",
+     "pos3",
+     "axis3",
+     "edge",
+     "selresult"
+    ]
+   },
+   {
+    "type": "Sweep",
+    "props": [
+     "enttosweep",
+     "crossfaces",
+     "movetospine",
+     "edge",
+     "manualdir",
+     "reversedir",
+     "smooth",
+     "parameterization",
+     "spineperpstart",
+     "adjustlen",
+     "spineperpend",
+     "enttomatch",
+     "adjustlenend",
+     "keep",
+     "includefinal",
+     "parname",
+     "twisting",
+     "projvector"
+    ]
+   },
+   {
+    "type": "Thicken",
+    "props": [
+     "input",
+     "keep",
+     "offset",
+     "totalthick",
+     "upthick",
+     "downthick",
+     "direction",
+     "dirvector",
+     "fillet",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Thicken2D",
+    "props": [
+     "input",
+     "keep",
+     "offset",
+     "totalthick",
+     "ends",
+     "upthick",
+     "downthick",
+     "convexcorner",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   }
+  ],
+  "constraints_sketch": [
+   {
+    "type": "Coincident",
+    "props": [
+     "entity1",
+     "entity2",
+     "helppoint1",
+     "helppoint2",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Concentric",
+    "props": [
+     "edge",
+     "vertex",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "EqualDistance",
+    "props": [
+     "entity1",
+     "entity2",
+     "entity3",
+     "entity4",
+     "label",
+     "helppoint1",
+     "helppoint2",
+     "helppoint3",
+     "helppoint4",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "EqualRadius",
+    "props": [
+     "edge1",
+     "edge2",
+     "label",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Horizontal",
+    "props": [
+     "edge",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Parallel",
+    "props": [
+     "edge",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Perpendicular",
+    "props": [
+     "entity1",
+     "entity2",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Tangent",
+    "props": [
+     "edge",
+     "start",
+     "type",
+     "edge2",
+     "start2",
+     "point",
+     "coord",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "TangentConstraint",
+    "props": [
+     "edge1",
+     "point1",
+     "vertex1",
+     "edge2",
+     "point2",
+     "vertex2",
+     "helppoint1",
+     "helppoint2",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Vertical",
+    "props": [
+     "edge",
+     "buildtime",
+     "buildinfo"
+    ]
+   }
+  ],
+  "control_flow": [
+   {
+    "type": "Else",
+    "props": [
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "ElseIf",
+    "props": [
+     "condition",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "EndIf",
+    "props": [
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "If",
+    "props": [
+     "condition",
+     "buildtime",
+     "buildinfo"
+    ]
+   }
+  ],
+  "convert_extract": [
+   {
+    "type": "ConvertToCOMSOL",
+    "props": [
+     "input",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "ConvertToCurve",
+    "props": [
+     "input",
+     "keep",
+     "unite",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "ConvertToPoint",
+    "props": [
+     "input",
+     "keep",
+     "unite",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "ConvertToSolid",
+    "props": [
+     "input",
+     "keep",
+     "unite",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "ConvertToSurface",
+    "props": [
+     "input",
+     "keep",
+     "unite",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "EditObject",
+    "props": [
+     "input",
+     "edge",
+     "edgeactions",
+     "ctrlbezier",
+     "ctrlspline",
+     "degree",
+     "start",
+     "disconnectstart",
+     "end",
+     "disconnectend",
+     "vertex",
+     "vtxactions",
+     "xvertex",
+     "yvertex",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor"
+    ]
+   },
+   {
+    "type": "Extract",
+    "props": [
+     "input",
+     "inputhandling",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Knit",
+    "props": [
+     "input",
+     "repairtol",
+     "fillholes",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildmessage",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Split",
+    "props": [
+     "input",
+     "keep",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   }
+  ],
+  "curves": [
+   {
+    "type": "CrossSection",
+    "props": [
+     "workplane",
+     "intersect",
+     "input",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "selfrom3d",
+     "selfrom3dshow",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "CubicBezier",
+    "props": [
+     "p",
+     "w",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Helix",
+    "props": [
+     "type",
+     "turns",
+     "rmaj",
+     "rmin",
+     "axialpitch",
+     "radialpitch",
+     "chirality",
+     "endcaps",
+     "pos",
+     "axis",
+     "axistype",
+     "ax3",
+     "ax2",
+     "rot",
+     "workplanesrc",
+     "workplane",
+     "twistcomp",
+     "grep"
+    ]
+   },
+   {
+    "type": "InterpolationCurve",
+    "props": [
+     "type",
+     "source",
+     "filename",
+     "struct",
+     "rebuild",
+     "table",
+     "x",
+     "y",
+     "rtol",
+     "startcond",
+     "starttang",
+     "endcond",
+     "endtang",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto"
+    ]
+   },
+   {
+    "type": "LineSegment",
+    "props": [
+     "specify1",
+     "vertex1",
+     "coord1constr",
+     "coord1",
+     "specify2",
+     "vertex2",
+     "coord2constr",
+     "coord2",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "ParametricCurve",
+    "props": [
+     "parname",
+     "parmin",
+     "parmax",
+     "coord",
+     "pos",
+     "rot",
+     "rtol",
+     "maxknots",
+     "reparameterize",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "ParametricSurface",
+    "props": [
+     "parname1",
+     "parmin1",
+     "parmax1",
+     "parname2",
+     "parmin2",
+     "parmax2",
+     "coord",
+     "pos",
+     "axis",
+     "axistype",
+     "ax3",
+     "ax2",
+     "rot",
+     "workplanesrc",
+     "workplane",
+     "rtol",
+     "maxknots",
+     "selresult"
+    ]
+   },
+   {
+    "type": "QuadraticBezier",
+    "props": [
+     "p",
+     "w",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   }
+  ],
+  "livelink_cad": [
+   {
+    "type": "LiveLinkAutoCAD",
+    "props": [
+     "synchronizewith",
+     "document",
+     "layerstate",
+     "configtable",
+     "offline",
+     "selectsweep",
+     "requestfilename",
+     "receivefilename",
+     "receivecount",
+     "sweepfilename",
+     "sweepcount",
+     "sync",
+     "param",
+     "paramexpr",
+     "rosync",
+     "roparam",
+     "roparamexpr",
+     "unit"
+    ]
+   },
+   {
+    "type": "LiveLinkInventor",
+    "props": [
+     "synchronizewith",
+     "synchronizematerial",
+     "document",
+     "tablerecord",
+     "view",
+     "position",
+     "modelstate",
+     "configtable",
+     "offline",
+     "selectsweep",
+     "requestfilename",
+     "receivefilename",
+     "receivecount",
+     "sweepfilename",
+     "sweepcount",
+     "sync",
+     "param",
+     "paramexpr"
+    ]
+   },
+   {
+    "type": "LiveLinkPTCCreoParametric",
+    "props": [
+     "synchronizewith",
+     "synchronizematerial",
+     "document",
+     "instance",
+     "simprep",
+     "simprepid",
+     "docrevision",
+     "docversion",
+     "configtable",
+     "offline",
+     "selectsweep",
+     "requestfilename",
+     "receivefilename",
+     "receivecount",
+     "sweepfilename",
+     "sweepcount",
+     "sync",
+     "param"
+    ]
+   },
+   {
+    "type": "LiveLinkRevit",
+    "props": [
+     "synchronizewith",
+     "synchronizematerial",
+     "document",
+     "configuration",
+     "configtable",
+     "offline",
+     "selectsweep",
+     "requestfilename",
+     "receivefilename",
+     "receivecount",
+     "sweepfilename",
+     "sweepcount",
+     "sync",
+     "param",
+     "paramexpr",
+     "rosync",
+     "roparam",
+     "roparamexpr"
+    ]
+   },
+   {
+    "type": "LiveLinkSOLIDWORKS",
+    "props": [
+     "synchronizewith",
+     "synchronizematerial",
+     "document",
+     "configuration",
+     "displaystate",
+     "configtable",
+     "offline",
+     "selectsweep",
+     "requestfilename",
+     "receivefilename",
+     "receivecount",
+     "sweepfilename",
+     "sweepcount",
+     "sync",
+     "param",
+     "paramexpr",
+     "rosync",
+     "roparam"
+    ]
+   },
+   {
+    "type": "LiveLinkSolidEdge",
+    "props": [
+     "synchronizewith",
+     "synchronizematerial",
+     "document",
+     "offline",
+     "selectsweep",
+     "requestfilename",
+     "receivefilename",
+     "receivecount",
+     "sweepfilename",
+     "sweepcount",
+     "sync",
+     "param",
+     "paramexpr",
+     "rosync",
+     "roparam",
+     "roparamexpr",
+     "unit",
+     "conversionunit"
+    ]
+   }
+  ],
+  "measurement": [
+   {
+    "type": "Angle",
+    "props": [
+     "edge1",
+     "reverse1",
+     "edge2",
+     "reverse2",
+     "angleconstr",
+     "angle",
+     "createpar",
+     "parname",
+     "helppoint1",
+     "helppoint2",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "CentroidMeasurement",
+    "props": [
+     "ent",
+     "parname",
+     "parval",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "DirDistance",
+    "props": [
+     "entity1",
+     "entity2",
+     "direction",
+     "vector",
+     "edge",
+     "distanceconstr",
+     "distance",
+     "createpar",
+     "parname",
+     "helppoint1",
+     "helppoint2",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Distance",
+    "props": [
+     "entity1",
+     "entity2",
+     "distanceconstr",
+     "distance",
+     "createpar",
+     "parname",
+     "helppoint1",
+     "helppoint2",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Position",
+    "props": [
+     "vertex",
+     "posconstr",
+     "pos",
+     "createpar",
+     "parname",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Radius",
+    "props": [
+     "edge",
+     "radiusconstr",
+     "radius",
+     "createpar",
+     "parname",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "TotalEdgeLength",
+    "props": [
+     "edge",
+     "lengthconstr",
+     "length",
+     "createpar",
+     "parname",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "XDistance",
+    "props": [
+     "entity1",
+     "entity2",
+     "distanceconstr",
+     "distance",
+     "createpar",
+     "parname",
+     "helppoint1",
+     "helppoint2",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "YDistance",
+    "props": [
+     "entity1",
+     "entity2",
+     "distanceconstr",
+     "distance",
+     "createpar",
+     "parname",
+     "helppoint1",
+     "helppoint2",
+     "buildtime",
+     "buildinfo"
+    ]
+   }
+  ],
+  "parts_and_misc": [
+   {
+    "type": "AdjacentSelection",
+    "props": [
+     "entitydim",
+     "input",
+     "outputdim",
+     "exterior",
+     "interior",
+     "selkeep",
+     "selshow",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Check",
+    "props": [
+     "input",
+     "checkresult",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "CircularArc",
+    "props": [
+     "specify",
+     "centerconstr",
+     "center",
+     "point1",
+     "point2constr",
+     "point2",
+     "rconstr",
+     "r",
+     "angle1",
+     "angle2",
+     "clockwise",
+     "shortarc",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime"
+    ]
+   },
+   {
+    "type": "Delete",
+    "props": [
+     "input",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "DistanceMeasurement",
+    "props": [
+     "ent1",
+     "ent2",
+     "extendent",
+     "parname",
+     "parnamevec",
+     "parval",
+     "parvalvec",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "ECone",
+    "props": [
+     "type",
+     "semiaxes",
+     "h",
+     "rat",
+     "displ",
+     "pos",
+     "axis",
+     "axistype",
+     "ax3",
+     "ax2",
+     "rot",
+     "workplanesrc",
+     "workplane",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto"
+    ]
+   },
+   {
+    "type": "Import",
+    "props": [
+     "type",
+     "filename",
+     "sequence",
+     "mesh",
+     "meshfilename",
+     "import_action",
+     "selresult",
+     "selresultshow",
+     "selindividual",
+     "selindividualintable",
+     "selindividualshow",
+     "contributeto",
+     "buildmessage",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "MeshControlDomains",
+    "props": [
+     "input",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "MeshControlEdges",
+    "props": [
+     "input",
+     "includevtx",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "MeshControlFaces",
+    "props": [
+     "input",
+     "includeadj",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "MeshControlVertices",
+    "props": [
+     "input",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "ParameterCheck",
+    "props": [
+     "condition",
+     "messagetype",
+     "message",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "PartInstance",
+    "props": [
+     "part",
+     "choosefromlibrary",
+     "inputname",
+     "inputexpr",
+     "imagefile",
+     "selnameobj",
+     "selcontributetoobj",
+     "selkeepobj",
+     "selnamedom",
+     "selcontributetodom",
+     "selkeepdom",
+     "selshowdom",
+     "selnamebnd",
+     "selcontributetobnd",
+     "selkeepbnd",
+     "selshowbnd",
+     "selkeepnoncontr",
+     "buildtime"
+    ]
+   },
+   {
+    "type": "Projection",
+    "props": [
+     "workplane",
+     "project",
+     "input",
+     "projectiontype",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "WorkPlane",
+    "props": [
+     "planetype",
+     "quickplane",
+     "quickoffsettype",
+     "offsetvertex",
+     "quickx",
+     "quicky",
+     "quickz",
+     "face",
+     "offsettype",
+     "offset",
+     "reverse",
+     "planaredge",
+     "edge",
+     "adjface",
+     "angle",
+     "circedge",
+     "circpoint",
+     "circvertex"
+    ]
+   }
+  ],
+  "primitives_2d": [
+   {
+    "type": "Circle",
+    "props": [
+     "type",
+     "rconstr",
+     "r",
+     "angle",
+     "base",
+     "posconstr",
+     "pos",
+     "rotconstr",
+     "rot",
+     "layername",
+     "layer",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "sellayer",
+     "sellayershow",
+     "contributeto"
+    ]
+   },
+   {
+    "type": "DiskSelection",
+    "props": [
+     "entitydim",
+     "groupcontang",
+     "angletol",
+     "inputent",
+     "input",
+     "posx",
+     "posy",
+     "posz",
+     "r",
+     "rin",
+     "angle1",
+     "angle2",
+     "condition",
+     "selkeep",
+     "selshow",
+     "contributeto",
+     "color",
+     "customcolor"
+    ]
+   },
+   {
+    "type": "Ellipse",
+    "props": [
+     "type",
+     "semiaxesconstr",
+     "semiaxes",
+     "angle",
+     "base",
+     "posconstr",
+     "pos",
+     "rotconstr",
+     "rot",
+     "layername",
+     "layer",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "sellayer",
+     "sellayershow",
+     "contributeto"
+    ]
+   },
+   {
+    "type": "Interval",
+    "props": [
+     "specify",
+     "coordsource",
+     "coord",
+     "coordvec",
+     "left",
+     "lensource",
+     "len",
+     "lenvec",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Point",
+    "props": [
+     "p",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Polygon",
+    "props": [
+     "type",
+     "source",
+     "filename",
+     "rebuild",
+     "table",
+     "x",
+     "y",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Rectangle",
+    "props": [
+     "type",
+     "sizeconstr",
+     "size",
+     "base",
+     "posconstr",
+     "pos",
+     "rotconstr",
+     "rot",
+     "layername",
+     "layer",
+     "layerleft",
+     "layerright",
+     "layerbottom",
+     "layertop",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor"
+    ]
+   },
+   {
+    "type": "Square",
+    "props": [
+     "type",
+     "size",
+     "base",
+     "posconstr",
+     "pos",
+     "rotconstr",
+     "rot",
+     "layername",
+     "layer",
+     "layerleft",
+     "layerright",
+     "layerbottom",
+     "layertop",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "sellayer"
+    ]
+   }
+  ],
+  "primitives_3d": [
+   {
+    "type": "Block",
+    "props": [
+     "type",
+     "size",
+     "base",
+     "pos",
+     "axis",
+     "axistype",
+     "ax3",
+     "ax2",
+     "rot",
+     "workplanesrc",
+     "workplane",
+     "layername",
+     "layer",
+     "layerleft",
+     "layerright",
+     "layerfront",
+     "layerback",
+     "layerbottom"
+    ]
+   },
+   {
+    "type": "Cone",
+    "props": [
+     "type",
+     "r",
+     "h",
+     "specifytop",
+     "ang",
+     "rtop",
+     "pos",
+     "axis",
+     "axistype",
+     "ax3",
+     "ax2",
+     "rot",
+     "workplanesrc",
+     "workplane",
+     "layername",
+     "layer",
+     "layerside",
+     "layerbottom"
+    ]
+   },
+   {
+    "type": "Cylinder",
+    "props": [
+     "type",
+     "r",
+     "h",
+     "pos",
+     "axis",
+     "axistype",
+     "ax3",
+     "ax2",
+     "rot",
+     "workplanesrc",
+     "workplane",
+     "layername",
+     "layer",
+     "layerside",
+     "layerbottom",
+     "layertop",
+     "selresult",
+     "selresultshow"
+    ]
+   },
+   {
+    "type": "Ellipsoid",
+    "props": [
+     "type",
+     "semiaxes",
+     "pos",
+     "axis",
+     "axistype",
+     "ax3",
+     "ax2",
+     "rot",
+     "workplanesrc",
+     "workplane",
+     "layername",
+     "layer",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "sellayer",
+     "sellayershow"
+    ]
+   },
+   {
+    "type": "Hexahedron",
+    "props": [
+     "type",
+     "p",
+     "workplanesrc",
+     "workplane",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Pyramid",
+    "props": [
+     "type",
+     "a",
+     "b",
+     "h",
+     "rat",
+     "displ",
+     "pos",
+     "axis",
+     "axistype",
+     "ax3",
+     "ax2",
+     "rot",
+     "workplanesrc",
+     "workplane",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor"
+    ]
+   },
+   {
+    "type": "Sphere",
+    "props": [
+     "type",
+     "r",
+     "pos",
+     "axis",
+     "axistype",
+     "ax3",
+     "ax2",
+     "rot",
+     "workplanesrc",
+     "workplane",
+     "layername",
+     "layer",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "sellayer",
+     "sellayershow"
+    ]
+   },
+   {
+    "type": "Tetrahedron",
+    "props": [
+     "type",
+     "p",
+     "workplanesrc",
+     "workplane",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Torus",
+    "props": [
+     "type",
+     "rmaj",
+     "rmin",
+     "angle",
+     "intfaces",
+     "pos",
+     "axis",
+     "axistype",
+     "ax3",
+     "ax2",
+     "rot",
+     "workplanesrc",
+     "workplane",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto"
+    ]
+   }
+  ],
+  "repair_defeaturing": [
+   {
+    "type": "CapFaces",
+    "props": [
+     "input",
+     "groupadjedg",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "createdentities",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Chamfer",
+    "props": [
+     "selectinsketch",
+     "point",
+     "pointinsketch",
+     "dist",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Chamfer3D",
+    "props": [
+     "edge",
+     "groupcontang",
+     "angletol",
+     "radius",
+     "propagate",
+     "preserveoverlapped",
+     "yshaped",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "DeleteFillets",
+    "props": [
+     "input",
+     "minentsize",
+     "entsize",
+     "find",
+     "detail",
+     "delete",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "DeleteHoles",
+    "props": [
+     "input",
+     "minentsize",
+     "entsize",
+     "find",
+     "detail",
+     "delete",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "DeleteShortEdges",
+    "props": [
+     "input",
+     "entsize",
+     "find",
+     "detail",
+     "delete",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "DeleteSliverFaces",
+    "props": [
+     "input",
+     "entsize",
+     "find",
+     "detail",
+     "delete",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "DeleteSmallFaces",
+    "props": [
+     "input",
+     "entsize",
+     "find",
+     "detail",
+     "delete",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "DeleteSpikes",
+    "props": [
+     "input",
+     "entsize",
+     "find",
+     "detail",
+     "delete",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "DetachFaces",
+    "props": [
+     "input",
+     "healparent",
+     "healchild",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "DetectInterferences",
+    "props": [
+     "input",
+     "abstol",
+     "gaptol",
+     "showingraphics",
+     "groupbyobject",
+     "showintersections",
+     "showtouches",
+     "showgaps",
+     "showcontainments",
+     "detail",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Fillet",
+    "props": [
+     "selectinsketch",
+     "point",
+     "pointinsketch",
+     "radiusconstr",
+     "radius",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Fillet3D",
+    "props": [
+     "edge",
+     "groupcontang",
+     "angletol",
+     "fillettype",
+     "radius",
+     "width",
+     "tableedge",
+     "tableparam",
+     "tableradius",
+     "tableclamp",
+     "propagate",
+     "preserveoverlapped",
+     "yshaped",
+     "filletsharp",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor"
+    ]
+   },
+   {
+    "type": "ProjectToFaces",
+    "props": [
+     "target",
+     "imprint",
+     "tool",
+     "projdir",
+     "dirvector",
+     "edge",
+     "eyevertex",
+     "maxdist",
+     "repairtoltype",
+     "repairtol",
+     "absrepairtol",
+     "extendedges",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime"
+    ]
+   },
+   {
+    "type": "RemoveDetails",
+    "props": [
+     "automatic",
+     "selection",
+     "input",
+     "contvertices",
+     "shortedges",
+     "smallfaces",
+     "sliverfaces",
+     "narrowfaceregions",
+     "thindomains",
+     "detailsizetype",
+     "maxrelsize",
+     "maxabssize",
+     "contangletol",
+     "nodetail",
+     "removeddetails",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Repair",
+    "props": [
+     "input",
+     "repairtol",
+     "simplify",
+     "repairfacetoface",
+     "check",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "nodetail",
+     "removeddetails",
+     "checkresult",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "ReplaceFaces",
+    "props": [
+     "input",
+     "heal",
+     "throughhole",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   }
+  ],
+  "selection": [
+   {
+    "type": "BallSelection",
+    "props": [
+     "entitydim",
+     "groupcontang",
+     "angletol",
+     "inputent",
+     "input",
+     "posx",
+     "posy",
+     "posz",
+     "r",
+     "condition",
+     "selkeep",
+     "selshow",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "BoxSelection",
+    "props": [
+     "entitydim",
+     "groupcontang",
+     "angletol",
+     "inputent",
+     "input",
+     "xmin",
+     "xmax",
+     "ymin",
+     "ymax",
+     "zmin",
+     "zmax",
+     "condition",
+     "selkeep",
+     "selshow",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "ComplementSelection",
+    "props": [
+     "entitydim",
+     "input",
+     "selkeep",
+     "selshow",
+     "contributeto",
+     "buildmessage",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "CylinderSelection",
+    "props": [
+     "entitydim",
+     "groupcontang",
+     "angletol",
+     "inputent",
+     "input",
+     "r",
+     "rin",
+     "top",
+     "bottom",
+     "angle1",
+     "angle2",
+     "pos",
+     "axis",
+     "axistype",
+     "ax3",
+     "ax2",
+     "condition",
+     "selkeep"
+    ]
+   },
+   {
+    "type": "DifferenceSelection",
+    "props": [
+     "entitydim",
+     "add",
+     "subtract",
+     "selkeep",
+     "selshow",
+     "contributeto",
+     "buildmessage",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "ExplicitSelection",
+    "props": [
+     "selection",
+     "groupcontang",
+     "angletol",
+     "selkeep",
+     "selshow",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "IntersectionSelection",
+    "props": [
+     "entitydim",
+     "input",
+     "selkeep",
+     "selshow",
+     "contributeto",
+     "buildmessage",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "LogicalExpressionSelection",
+    "props": [
+     "entitydim",
+     "expression",
+     "selkeep",
+     "selshow",
+     "contributeto",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "UnionSelection",
+    "props": [
+     "entitydim",
+     "input",
+     "selkeep",
+     "selshow",
+     "contributeto",
+     "buildmessage",
+     "buildtime",
+     "buildinfo"
+    ]
+   }
+  ],
+  "transforms": [
+   {
+    "type": "Array",
+    "props": [
+     "input",
+     "size",
+     "displ",
+     "indexattr",
+     "indexattrtag",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Copy",
+    "props": [
+     "input",
+     "keep",
+     "specify",
+     "displx",
+     "oldpos",
+     "oldposvertex",
+     "oldposcoord",
+     "newpos",
+     "newposvertices",
+     "newposx",
+     "indexattr",
+     "indexattrtag",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Mirror",
+    "props": [
+     "input",
+     "keep",
+     "pos",
+     "axis",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Move",
+    "props": [
+     "input",
+     "keep",
+     "specify",
+     "displx",
+     "oldpos",
+     "oldposvertex",
+     "oldposcoord",
+     "newpos",
+     "newposvertices",
+     "newposx",
+     "indexattr",
+     "indexattrtag",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "RigidTransform",
+    "props": [
+     "input",
+     "keep",
+     "workplaneobj",
+     "workplanesrc",
+     "workplane",
+     "displ",
+     "axis",
+     "specify",
+     "axistype",
+     "ax3",
+     "ax2",
+     "rot",
+     "eulerang",
+     "edge",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor"
+    ]
+   },
+   {
+    "type": "Rotate",
+    "props": [
+     "input",
+     "keep",
+     "rotconstr",
+     "rot",
+     "specifycenter",
+     "posconstr",
+     "pos",
+     "center",
+     "indexattr",
+     "indexattrtag",
+     "selresult",
+     "selresultshow",
+     "color",
+     "customcolor",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "Scale",
+    "props": [
+     "input",
+     "keep",
+     "type",
+     "isotropic",
+     "anisotropic",
+     "factor",
+     "pos",
+     "selresult",
+     "selresultshow",
+     "contributeto",
+     "propagatesel",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "TransformFaces",
+    "props": [
+     "face",
+     "keep",
+     "workplanesrc",
+     "workplane",
+     "center",
+     "axis",
+     "specify",
+     "axistype",
+     "ax3",
+     "ax2",
+     "rot",
+     "eulerang",
+     "edge",
+     "factor",
+     "displ",
+     "stepfaces",
+     "mergestepfaces",
+     "exceptendfacesmerged"
+    ]
+   }
+  ],
+  "virtual_topology": [
+   {
+    "type": "CollapseEdges",
+    "props": [
+     "input",
+     "ignoremerged",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "CompositeDomains",
+    "props": [
+     "input",
+     "ignoreadj",
+     "keepformesh",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "CompositeEdges",
+    "props": [
+     "input",
+     "keepformesh",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "IgnoreEdges",
+    "props": [
+     "input",
+     "ignorevtx",
+     "keepformesh",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "IgnoreVertices",
+    "props": [
+     "input",
+     "keepformesh",
+     "buildtime",
+     "buildinfo"
+    ]
+   },
+   {
+    "type": "MergeVertices",
+    "props": [
+     "keepvtx",
+     "removevtx",
+     "buildtime",
+     "buildinfo"
+    ]
+   }
+  ]
+ }
+}
